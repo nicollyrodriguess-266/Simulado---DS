@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package br.edu.etec.SistemaDePagamento.model;
+
+/**
+ *
+ * @author cacal
+ */
+public abstract class Pagamento {
+
+    private double valor;
+    StatusPagamento status;
+
+    public Pagamento(double valor, StatusPagamento status) {
+        this.valor = valor;
+        this.status = status;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public void setStatus(StatusPagamento status) {
+        this.status = status;
+    }
+
+    public StatusPagamento getStatus() {
+        return status;
+    }
+
+    public abstract void processarPagamento();
+
+    public void ExibirStatus() {
+            System.out.println("Status do pagamento: " + status);
+    }
+}
